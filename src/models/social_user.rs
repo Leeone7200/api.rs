@@ -45,7 +45,7 @@ pub struct SocialUser {
     #[serde(rename = "class")]
     pub class: Class,
     /// CLASS 완성도에 따른 장식입니다. <solved-icon type=\"class:1\"></solved-icon> 장식 없음 (`\"none\"`), <solved-icon type=\"class:1s\"></solved-icon> 은장<sup>+</sup> (`\"silver\"`), <solved-icon type=\"class:1g\"></solved-icon> 금장<sup>++</sup> (`\"gold\"`)이 있습니다.
-    #[serde(rename = "classDecoration")]
+    #[serde(rename = "classDecoration", skip_serializing_if = "Option::is_none")]
     pub class_decoration: Option<ClassDecoration>,
     /// 라이벌 수입니다.
     #[serde(rename = "rivalCount")]

@@ -122,7 +122,7 @@ impl SocialUser {
             solved_count,
             vote_count,
             class,
-            class_decoration,
+            class_decoration: None,
             rival_count,
             reverse_rival_count,
             tier: Box::new(tier),
